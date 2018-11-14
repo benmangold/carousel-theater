@@ -1,0 +1,11 @@
+node_modules
+
+/react-client/dist/gallery.bundle.js
+
+package-lock.json
+
+bmngld.pem
+
+*.pem
+
+config.prod.js
