@@ -9,7 +9,7 @@ React, Node.js, MongoDB
 
 [gist with sample request](https://gist.github.com/benmangold/e686d23d396359a2a1314d489b799cbd)
 
-[Trello Task Board](https://trello.com/b/klbDbr5E/dd-gallery)
+[trello task board](https://trello.com/b/klbDbr5E/dd-gallery)
 
 # Dev Env Setup
 ## $ npm install
