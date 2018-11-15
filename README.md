@@ -9,7 +9,7 @@ React, Node.js, MongoDB
 
 [gist with sample request](https://gist.github.com/benmangold/e686d23d396359a2a1314d489b799cbd)
 
-# Dev Env
+# Dev Env Setup
 ## $ npm install
 ## $ npm run server-dev
 ## $ npm run react-dev
@@ -17,8 +17,8 @@ React, Node.js, MongoDB
 # Seed Local MongoDB
 Make sure MongoDB is installed and running at mongodb://127.0.0.1:27017
 
-## databse: deltaDrop
-## collection: products
+databse: deltaDrop
+collection: products
 ## $ npm run seed
 
 ## Required: DB_PROVIDER env variable must be available in production enviornment, pointing to prodcution db
