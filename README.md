@@ -1,6 +1,8 @@
 # dd-Gallery
 ## by Ben Mangold
 
+A fullscreen image gallery component with image carousel
+
 React, Node.js, MongoDB
 
 [demo video](https://www.dropbox.com/s/car3drvf8wecmhx/dd-gallery-screencap.mov?dl=0)
