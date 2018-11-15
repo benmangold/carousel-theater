@@ -1,6 +1,8 @@
 # dd-Gallery
 ## by Ben Mangold
 
+React, Node.js, MongoDB
+
 [demo video](https://www.dropbox.com/s/car3drvf8wecmhx/dd-gallery-screencap.mov?dl=0)
 
 [gist with sample request](https://gist.github.com/benmangold/e686d23d396359a2a1314d489b799cbd)
