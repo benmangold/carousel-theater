@@ -1,4 +1,4 @@
-# dd-Gallery
+# carousel-theater image gallery
 ## by Ben Mangold
 
 A full stack image gallery component with image carousel implemented in React
