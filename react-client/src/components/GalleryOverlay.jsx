@@ -53,7 +53,8 @@ class GalleryOverlay extends React.Component {
           </CarouselHeader>
           
           <ContentContainer>
-            
+            <div>
+              
             <BannerContainer> 
               <CenterImageWrapper>
                 <CenterImage src={this.props.imgs[this.state.centerImageIndex]}/>  
@@ -61,6 +62,7 @@ class GalleryOverlay extends React.Component {
               <BannerSpacer/>
             </BannerContainer>
 
+            </div>
             <ButtonLeftWrapper>
               <ButtonLeft onClick={this.handleLeftClick} type="image" src="https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/01_arrow_left-128.png"/>
             </ButtonLeftWrapper>
@@ -68,7 +70,7 @@ class GalleryOverlay extends React.Component {
             <ButtonRightWrapper>
               <ButtonRight onClick={this.handleRightClick} type="image" src="https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/01_arrow_left-128.png"/>
             </ButtonRightWrapper>
-
+            <div>
             <CarouselWrapper>
               <CarouselSection>
                 <CarouselImageWrapper>
@@ -79,6 +81,7 @@ class GalleryOverlay extends React.Component {
               </CarouselSection>
             </CarouselWrapper>
 
+        </div>
           </ContentContainer>
         </CarouselContainer>
       </Overlay>)
