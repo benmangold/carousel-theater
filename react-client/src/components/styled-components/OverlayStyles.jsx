@@ -89,7 +89,6 @@ position: fixed;
 display: block;
 top: 40%;
 opacity: 0.1;
-
 `;
 
 const ButtonLeft = styled(Button)`
@@ -107,8 +106,7 @@ const ButtonRight = styled(Button)`
   :hover {
     opacity: 1;
   }
-`
-
+`;
 
 const ButtonExit = styled.input`
   z-index: 3;
@@ -121,7 +119,6 @@ const ButtonExit = styled.input`
   :hover {
     opacity: 1;
   }
-
 `;
 
 export {

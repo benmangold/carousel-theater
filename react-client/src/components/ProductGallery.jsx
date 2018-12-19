@@ -1,3 +1,5 @@
+/* Parent of Gallery, which fetches and passes in data from the db */
+/* If no data is found it renders a 404 component */
 
 import React from 'react';
 import Gallery from './Gallery.jsx';
@@ -27,6 +29,7 @@ class ProductGallery extends React.Component {
 
     axios
       .get(`/productImages/${productName}`)
+
       .then(res => {
         this.setState({
           bannerImg: res.data.bannerImageUrl,

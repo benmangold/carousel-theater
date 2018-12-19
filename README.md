@@ -24,7 +24,7 @@ Branch off of dev, naming the branch after a ticket on trello
 
 Make sure MongoDB is installed and running at mongodb://127.0.0.1:27017
 The app is configured to use:
-`database: deltaDrop`
+`databse: deltaDrop`
 `collection: products`
 
 ## $ npm run seed

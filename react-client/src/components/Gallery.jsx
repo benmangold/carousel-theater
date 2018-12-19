@@ -17,9 +17,9 @@ class Gallery extends React.Component {
     super(props);
     this.state = {
       overlay: false,
-    }
-    this.handleImageClick = () => this.setState({ overlay: true })
-    this.handleOverlayClick = () => this.setState({ overlay: false})
+    };
+    this.handleImageClick = () => this.setState({ overlay: true });
+    this.handleOverlayClick = () => this.setState({ overlay: false });
   }
   render() {
     return (
