@@ -1,4 +1,6 @@
-module.exports.giveMeFlashlight = (productName) => {
+/* This file provides test data as json for seeding the db */
+
+module.exports.giveMeFlashlight = productName => {
   return {
     "productName": productName,
     "bannerImageUrl": "https://massdrop-s3.imgix.net/product-images/nitecore-ec22-1000-lumen-infinite-led-flashlight/FP/PAHNdxJRHeuuutzQqqs7_banner.jpg?auto=format&fm=jpg&fit=crop&w=1300&h=393.93939393939394&bg=f0f0f0&q=38&dpr=2",
@@ -33,7 +35,8 @@ module.exports.giveMeFlashlight = (productName) => {
   }
 }
 
-module.exports.giveMeHeadphones = (productName) => {
+
+module.exports.giveMeHeadphones = productName => {
   return {
     "productName": productName,
     "bannerImageUrl": "https://massdrop-s3.imgix.net/product-images/massdrop-x-hifiman-edition-xx-headphones/FP/oPTmYvneR4mgwCXxVo8m_AI7B2574-copy-banner.jpg?auto=format&fm=jpg&fit=crop&w=1600&h=484.8484848484849&bg=f0f0f0&q=38&dpr=2",
@@ -52,7 +55,8 @@ module.exports.giveMeHeadphones = (productName) => {
   }
 }
 
-module.exports.giveMeKeyboard = (productName) => {
+
+module.exports.giveMeKeyboard = productName => {
   return {
     "productName": productName,
     "bannerImageUrl": "https://massdrop-s3.imgix.net/product-images/planck-mechanical-keyboard/FP/Wle56GwdRgWPrbNaWRR7_AI7B6090-copy-banner.jpg?auto=format&fm=jpg&fit=crop&w=1600&h=484.8484848484849&bg=f0f0f0&q=38&dpr=2",
@@ -71,55 +75,59 @@ module.exports.giveMeKeyboard = (productName) => {
   }
 }
 
-module.exports.giveMeSeki = (productName) => {
-  return {
-    "productName": productName,
-    "bannerImageUrl": "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-26696_20160907100117_7a4ec8e1df101933.jpg?auto=format&fm=jpg&fit=crop&w=1300&h=393.93939393939394&bg=f0f0f0&q=38&dpr=2",
-	  "productImageUrls": [
-      "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140124_2b713cd4c2a512bf.jpg?auto=format&fm=jpg&fit=crop&w=955&bg=f0f0f0&dpr=2", 
-      "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140116_ae1e49ea4ed70295.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2", 
-      "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140120_9530bb0e7d7210ed.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2", 
-      "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140119_6ae07590600c9eb1.jpg?auto=format&fm=jpg&fit=crop&w=955&bg=f0f0f0&dpr=2", 
-      "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140121_cf0b2f9b40987d9c.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2", 
-      "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140122_55bc1e6f8abdab8e.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2",
-      "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140121_6822ac4fc567f904.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2",
-      "https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140121_cf0b2f9b40987d9c.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2"
-    ]
-  }
-}
 
-module.exports.giveMeWatches = (productName) => {
+module.exports.giveMeSeki = productName => {
   return {
-    "productName": productName,
-    "bannerImageUrl": "https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170307133651_61d31bad1fd919f0.jpg?auto=format&fm=jpg&fit=crop&w=1300&h=393.93939393939394&bg=f0f0f0&q=38&dpr=2",
-	  "productImageUrls": [
-      "https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170314144456_2fce6411a07a1e77.jpg?auto=format&fm=jpg&fit=crop&w=955&bg=f0f0f0&dpr=2", 
-      "https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170310104243_76ad41890b54249c.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2", 
-      "https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170310104242_81fcf644ff22679b.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2", 
-      "https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170310104242_3cbacbb3a05d7eb5.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2"
-    ]
-  }
-}
+    productName: productName,
+    bannerImageUrl:
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-26696_20160907100117_7a4ec8e1df101933.jpg?auto=format&fm=jpg&fit=crop&w=1300&h=393.93939393939394&bg=f0f0f0&q=38&dpr=2',
+    productImageUrls: [
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140124_2b713cd4c2a512bf.jpg?auto=format&fm=jpg&fit=crop&w=955&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140116_ae1e49ea4ed70295.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140120_9530bb0e7d7210ed.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140119_6ae07590600c9eb1.jpg?auto=format&fm=jpg&fit=crop&w=955&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140121_cf0b2f9b40987d9c.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140122_55bc1e6f8abdab8e.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140121_6822ac4fc567f904.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/seki-edge-grooming-kit/MD-22295_20160630140121_cf0b2f9b40987d9c.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+    ],
+  };
+};
 
-module.exports.giveMeCats = (productName) => {
+module.exports.giveMeWatches = productName => {
   return {
-    "productName": productName,
-    "bannerImageUrl": "https://www.cats.org.uk/uploads/branches/1/42847%20Cats%20Weekly%20Lottery%20Web%20Banner.jpg",
-	  "productImageUrls": [
-      "https://timedotcom.files.wordpress.com/2015/02/grumpy-cat1.jpg", 
-      "https://images.pexels.com/photos/74177/cat-74177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", 
-      "https://timedotcom.files.wordpress.com/2015/02/grumpy-cat1.jpg", 
-      "https://images.pexels.com/photos/74177/cat-74177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", 
-      "https://timedotcom.files.wordpress.com/2015/02/grumpy-cat1.jpg", 
-      "https://images.pexels.com/photos/74177/cat-74177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ]
-  }
-}
-module.exports.giveMeDogs = (productName) => {
+    productName: productName,
+    bannerImageUrl:
+      'https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170307133651_61d31bad1fd919f0.jpg?auto=format&fm=jpg&fit=crop&w=1300&h=393.93939393939394&bg=f0f0f0&q=38&dpr=2',
+    productImageUrls: [
+      'https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170314144456_2fce6411a07a1e77.jpg?auto=format&fm=jpg&fit=crop&w=955&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170310104243_76ad41890b54249c.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170310104242_81fcf644ff22679b.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+      'https://massdrop-s3.imgix.net/product-images/glycine-combat-7-vintage-automatic-watch/MD-35241_20170310104242_3cbacbb3a05d7eb5.jpg?auto=format&fm=jpg&fit=crop&w=473&bg=f0f0f0&dpr=2',
+    ],
+  };
+};
+
+module.exports.giveMeCats = productName => {
   return {
-    "productName": productName,
-    "bannerImageUrl": "https://www.petconnectrescue.org/wp-content/uploads/2013/05/three-dogs-banner-e1500758981792.jpg",
-	  "productImageUrls": [
-    ]
-  }
-}
+    productName: productName,
+    bannerImageUrl:
+      'https://www.cats.org.uk/uploads/branches/1/42847%20Cats%20Weekly%20Lottery%20Web%20Banner.jpg',
+    productImageUrls: [
+      'https://timedotcom.files.wordpress.com/2015/02/grumpy-cat1.jpg',
+      'https://images.pexels.com/photos/74177/cat-74177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      'https://timedotcom.files.wordpress.com/2015/02/grumpy-cat1.jpg',
+      'https://images.pexels.com/photos/74177/cat-74177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      'https://timedotcom.files.wordpress.com/2015/02/grumpy-cat1.jpg',
+      'https://images.pexels.com/photos/74177/cat-74177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    ],
+  };
+};
+module.exports.giveMeDogs = productName => {
+  return {
+    productName: productName,
+    bannerImageUrl:
+      'https://www.petconnectrescue.org/wp-content/uploads/2013/05/three-dogs-banner-e1500758981792.jpg',
+    productImageUrls: [],
+  };
+};
