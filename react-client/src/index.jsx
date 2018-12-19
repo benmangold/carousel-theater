@@ -3,10 +3,6 @@ import ReactDom from 'react-dom';
 import Gallery from './components/Gallery.jsx';
 import ProductGallery from './components/ProductGallery.jsx';
 
-const GalleryContainer = () => {
-  return(<div>
-    <ProductGallery/>
-  </div>)
-}
+const GalleryContainer = () => <ProductGallery />
 
-ReactDom.render(<GalleryContainer/>, document.getElementById('gallery'))
+ReactDom.render(<GalleryContainer />, document.getElementById('gallery'));
