@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import GalleryOverlay from './Overlay.jsx';
+import GalleryOverlay from './GalleryOverlay.jsx';
 import {
   Container,
   Image,

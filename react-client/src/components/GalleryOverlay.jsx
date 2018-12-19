@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import {
   Overlay,
   CenterImage,
@@ -13,8 +12,6 @@ import {
   CarouselImageWrapper,
   CarouselContainer,
   CarouselHeader,
-  ButtonLeftWrapper,
-  ButtonRightWrapper,
   ButtonLeft,
   ButtonRight,
   ButtonExit,
