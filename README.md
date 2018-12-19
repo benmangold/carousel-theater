@@ -2,6 +2,7 @@
 ## by Ben Mangold
 
 A full stack image gallery component with image carousel implemented in React
+
 A web service and db are provided with scripts to seed the db and serve the component
 
 React, Node.js, MongoDB
@@ -27,16 +28,21 @@ The app is configured to use:
 `databse: deltaDrop`
 `collection: products`
 
-## $ npm run seed
+```
+$ npm run seed
+```
 
 # Running Locally
 
-## $ npm install
-## $ npm run server-dev
-## $ npm run react-dev
+```
+$ npm install
+$ npm run server-dev
+$ npm run react-dev
+```
 
 # Deployment
 
-## Required: DB_PROVIDER env variable must be available in production enviornment, pointing to prodcution db
-### ex on ec2: ec2-instance$ export DB_PROVIDER=mongodb://<un>:<pw>@ds249583.mlab.com:49583/delta-drop
-
+Required: DB_PROVIDER env variable must be available in production enviornment, pointing to prodcution db
+```
+ex on ec2: ec2-instance$ export DB_PROVIDER=mongodb://<un>:<pw>@ds249583.mlab.com:49583/delta-drop
+```
