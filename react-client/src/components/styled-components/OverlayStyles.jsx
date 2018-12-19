@@ -56,6 +56,7 @@ const CarouselImage = styled.img`
   padding: 5px;
 `;
 const CarouselImageWrapper = styled.div`
+  overflow-x: scroll;
   -webkit-flex: 1;
   position: fixed;
   bottom: 3%;
@@ -78,9 +79,7 @@ const CarouselHeader = styled.div`
   height: 40px;
   margin: 0 10px 10px;
 `;
-
 const Button = styled.input`
-
 input:focus{
   outline: none;
 }
