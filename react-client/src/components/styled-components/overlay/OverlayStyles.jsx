@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Overlay = styled.div`
@@ -12,6 +11,7 @@ const Overlay = styled.div`
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
 `;
+
 const CenterImage = styled.img`
   max-width: 80%;
   max-height: 350px;
@@ -19,34 +19,41 @@ const CenterImage = styled.img`
   display: block;
   margin: auto;
 `;
+
 const BannerSpacer = styled.div`
   margin-top: 10px;
 `;
+
 const BannerContainer = styled.div`
   position: relative;
   max-height: 20%;
   justify-content: center;
   max-height: 65vh;
 `;
+
 const CenterImageWrapper = styled.span`
   width: 100%;
   position: relative;
   display: inline-block;
   box-sizing: inherit;
 `;
+
 const ContentContainer = styled.div`
   position: relative;
   z-index: 1;
   box-sizing: inherit;
 `;
+
 const CarouselSection = styled.section`
   padding-left: 24px;
   padding-right: 24px;
 `;
+
 const CarouselWrapper = styled.div`
   display: block;
   box-sizing: inherit;
 `;
+
 const CarouselImage = styled.img`
   display: inline-block
   position: relative;
@@ -55,6 +62,7 @@ const CarouselImage = styled.img`
   float: left;
   padding: 5px;
 `;
+
 const CarouselImageWrapper = styled.div`
   overflow-x: scroll;
   -webkit-flex: 1;
@@ -68,12 +76,14 @@ const CarouselImageWrapper = styled.div`
   text-align: center;
   clear: both;
 `;
+
 const CarouselContainer = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
   max-width: 1300px;
 `;
+
 const CarouselHeader = styled.div`
   padding-top: 10px;
   height: 40px;

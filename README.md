@@ -20,19 +20,11 @@ Branch off of dev, naming the branch after a ticket on trello
 
 [trello task board](https://trello.com/b/klbDbr5E/dd-gallery)
 
+# Component Usage
 
-# Seed Local MongoDB
 
-Make sure MongoDB is installed and running at mongodb://127.0.0.1:27017
-The app is configured to use:
-`databse: deltaDrop`
-`collection: products`
 
-```
-$ npm run seed
-```
-
-# Running Locally
+# Running Web Service Locally
 
 ```
 $ npm install
@@ -40,7 +32,19 @@ $ npm run server-dev
 $ npm run react-dev
 ```
 
-# Deployment
+# Seed Local MongoDB
+
+Make sure MongoDB is installed and running at mongodb://127.0.0.1:27017
+The app is configured to use:
+
+`databse: deltaDrop`
+`collection: products`
+
+```
+$ npm run seed
+```
+
+# Web Service Deployment
 
 Required: DB_PROVIDER env variable must be available in production enviornment, pointing to prodcution db
 ```

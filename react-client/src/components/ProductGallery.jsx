@@ -1,15 +1,30 @@
-/* Parent of Gallery, which fetches and passes in data from the db */
-/* If no data is found it renders a 404 component */
+/* fetches product data to render cpt */
 
 import React from 'react';
-import Gallery from './Gallery.jsx';
 import axios from 'axios';
-import styled from 'styled-components';
 
-const NotFound = styled.div`
-  display: ${props => (props.fourOhFour ? 'block' : 'none')};
-`;
+import EmbeddedImage from './EmbeddedImage.jsx';
+import AbstractOverlay from './overlay/AbstractOverlay.jsx';
+import NotFound from './styled-components/NotFound.jsx';
 
+import { MagnifyingGlass } from './styled-components/GalleryStyles.jsx';
+
+const MAGNIFYING_GLASS_URL =
+  'https://image.flaticon.com/icons/svg/181/181561.svg';
+
+const ProductImage = props => {
+  return (
+    <EmbeddedImage
+      src={props.bannerImg}
+      scrollOverDisplay={!props.scrollOverDisplay}
+      renderScrollOverDisplay={() => {
+        return <MagnifyingGlass src={MAGNIFYING_GLASS_URL} />;
+      }}
+    />
+  );
+};
+
+const ProductBanner = () => {};
 class ProductGallery extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +44,6 @@ class ProductGallery extends React.Component {
 
     axios
       .get(`/productImages/${productName}`)
-
       .then(res => {
         this.setState({
           bannerImg: res.data.bannerImageUrl,
@@ -42,6 +56,8 @@ class ProductGallery extends React.Component {
           this.setState({
             fourOhFour: true,
           });
+        } else {
+          throw err;
         }
       });
   }
@@ -49,10 +65,36 @@ class ProductGallery extends React.Component {
   render() {
     return (
       <div>
-        <Gallery src={this.state.bannerImg} imgs={this.state.carouselImgs} />
         <NotFound fourOhFour={this.state.fourOhFour}>
           Not Found - Please Try Another Product
         </NotFound>
+        <AbstractOverlay
+          // carouselImgs={this.state.carouselImgs}
+          render={() => {
+            return (
+              <ProductImage
+                scrollOverDisplay={this.state.scrollOverDisplay}
+                bannerImg={this.state.bannerImg}
+              />
+            );
+          }}
+          renderBanner={() => {
+            return <EmbeddedImage src={this.state.bannerImg} />;
+          }}
+          renderCarousel={() => {
+            this.state.carouselImgs.map((item, index, collection) => {
+              return (
+                <EmbeddedImage
+                  src={item}
+                  scrollOverDisplay={true}
+                  renderScrollOverDisplay={() => {
+                    return <MagnifyingGlass src={MAGNIFYING_GLASS_URL} />;
+                  }}
+                />
+              );
+            });
+          }}
+        />
       </div>
     );
   }
