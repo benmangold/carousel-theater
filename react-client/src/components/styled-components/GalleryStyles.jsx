@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+const ImageContainer = styled.div`
   position: relative;
 `;
 const Image = styled.img`
@@ -17,9 +17,9 @@ const MagnifyingGlass = styled.img`
   height: 15%;
   width: 15%;
   opacity: 0;
-  ${Container}:hover & {
+  ${ImageContainer}:hover & {
     opacity: 1;
   }
 `;
 
-export { Container, Image, MagnifyingGlass };
+export { ImageContainer, Image, MagnifyingGlass };

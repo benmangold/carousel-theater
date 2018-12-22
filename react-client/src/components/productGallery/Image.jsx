@@ -3,13 +3,13 @@
 import React from 'react';
 
 import {
-  Container,
+  ImageContainer,
   Image,
-} from './styled-components/GalleryStyles.jsx';
+} from '../styled-components/GalleryStyles.jsx';
 
 export default (props) => (
-  <Container>
+  <ImageContainer>
     <Image src={props.src} />
     {props.scrollOverDisplay ? props.renderScrollOverDisplay(): (null)}
-  </Container>
+  </ImageContainer>
 );

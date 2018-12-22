@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import ProductGallery from './components/ProductGallery.jsx';
+import ProductGallery from './components/productGallery/index.jsx';
 
-const Pg = () => <ProductGallery/>;
-
-ReactDom.render(<Pg/>, document.getElementById('gallery'));
+ReactDom.render(<ProductGallery/>, document.getElementById('gallery'));

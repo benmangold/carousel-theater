@@ -1,11 +1,7 @@
 import React from 'react';
 import Overlay from './Overlay.jsx';
 
-// /* Overlay recieves what to render via render props  */
-
-// /* whatever Overlay renders will create a full screen overlay upon click */
-
-export default class AbstractOverlay extends React.Component {
+export default class OverlayRenderer extends React.Component {
   constructor(props) {
     super(props) 
 

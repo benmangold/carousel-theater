@@ -26,14 +26,14 @@ const BannerSpacer = styled.div`
 
 const BannerContainer = styled.div`
   position: relative;
-  max-height: 20%;
   justify-content: center;
   max-height: 65vh;
 `;
 
 const CenterImageWrapper = styled.span`
   width: 100%;
-  position: relative;
+  position: fixed;
+  top: 20%;
   display: inline-block;
   box-sizing: inherit;
 `;
@@ -120,11 +120,11 @@ const ButtonRight = styled(Button)`
 
 const ButtonExit = styled.input`
   z-index: 3;
-  height: 10%;
+  height: 44px;
   float: right;
   position: fixed;
-  top: 5%
-  left:90%
+  top: 3%
+  left:93%
   opacity:.5
   :hover {
     opacity: 1;

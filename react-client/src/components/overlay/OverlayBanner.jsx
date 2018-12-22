@@ -10,10 +10,8 @@ import {
 export default props => {
   return (
     <BannerContainer>
-      <CenterImageWrapper>
-        {/* <CenterImage src={props.src} /> */} 
-        {props.render()}
-      </CenterImageWrapper>
+      <BannerSpacer />
+      <CenterImageWrapper>{props.render()}</CenterImageWrapper>
       <BannerSpacer />
     </BannerContainer>
   );
