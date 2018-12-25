@@ -1,3 +1,4 @@
+
 import styled from 'styled-components';
 
 const ImageContainer = styled.div`
@@ -6,7 +7,11 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   width: 100%;
   max-height: 60%;
-  display: block;
+`;
+
+const ImageStyles = styled.div`
+  width: 100%;
+  max-height: 60%;
 `;
 const MagnifyingGlass = styled.img`
   position: absolute;
@@ -22,4 +27,4 @@ const MagnifyingGlass = styled.img`
   }
 `;
 
-export { ImageContainer, Image, MagnifyingGlass };
+export { ImageContainer, Image, MagnifyingGlass, ImageStyles };

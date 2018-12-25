@@ -5,11 +5,11 @@ import React from 'react';
 import {
   ImageContainer,
   Image,
-} from '../styled-components/GalleryStyles.jsx';
+} from '../styled-components/ProductGalleryStyles.jsx';
 
-export default (props) => (
+export default props => (
   <ImageContainer>
     <Image src={props.src} />
-    {props.scrollOverDisplay ? props.renderScrollOverDisplay(): (null)}
+    {props.scrollOverDisplay ? props.renderScrollOverDisplay() : null}
   </ImageContainer>
 );

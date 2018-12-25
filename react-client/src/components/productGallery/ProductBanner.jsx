@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from './Image.jsx';
+import ScrollOverImage from './ScrollOverImage.jsx';
 
 export default props => {
-  return <Image src={props.bannerImg} />;
+  return <ScrollOverImage src={props.bannerImg} />;
 };

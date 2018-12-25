@@ -1,11 +1,10 @@
 import React from 'react';
-import Image from './Image.jsx';
+import ScrollOverImage from './ScrollOverImage.jsx';
 import MagnifyingGlass from './MagnifyingGlass.jsx';
-
 
 export default props => {
   return (
-    <Image
+    <ScrollOverImage
       src={props.bannerImg}
       scrollOverDisplay={true}
       renderScrollOverDisplay={() => <MagnifyingGlass />}

@@ -1,18 +1,20 @@
+/* displays a fullscreen overlay with a banner, or a banner with a carousel */
+
 import React from 'react';
 
 import {
-  Overlay,
-  ContentContainer,
-  CarouselContainer,
-  ButtonLeft,
-  ButtonRight,
+  OverlayContainer,
+  ButtonExit,
 } from '../styled-components/overlay/OverlayStyles.jsx';
 
 import OverlayHeader from './OverlayHeader.jsx';
 import OverlayBanner from './OverlayBanner.jsx';
 import OverlayCarousel from './OverlayCarousel.jsx';
 
-class GalleryOverlay extends React.Component {
+const X_BUTTON_URL =
+  'https://cdn3.iconfinder.com/data/icons/iconic-1/32/x_alt-512.png';
+const IMAGE = 'image';
+class Overlay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,47 +44,48 @@ class GalleryOverlay extends React.Component {
 
   render() {
     return (
-      <Overlay overlay={this.props.overlay}>
-        <CarouselContainer>
-          
-          <OverlayHeader handleExit={this.props.handleExit} />
-
-          <ContentContainer>
-            <OverlayBanner
-              src={this.props.imgs[this.state.centerImageIndex]}
-              render={this.props.renderBanner}
-              index={this.state.centerImageIndex}
-              imgs={this.props.imgs}
+      <OverlayContainer overlay={this.props.overlay}>
+        <OverlayHeader
+          handleExit={this.props.handleExit}
+          render={() => (
+            <ButtonExit
+              onClick={this.props.handleExit}
+              type={IMAGE}
+              src={X_BUTTON_URL}
             />
+          )}
+        />
 
-            <ButtonLeft
-              onClick={this.handleLeftClick}
-              type='image'
-              src='https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/01_arrow_left-128.png'
-            />
-
-            <ButtonRight
-              onClick={this.handleRightClick}
-              type='image'
-              src='https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/01_arrow_left-128.png'
-            />
-
-            <OverlayCarousel
-              handleImageClick={this.handleImageClick}
-              imgs={this.props.imgs}
-              render={this.props.renderCarousel}
-            />
-          </ContentContainer>
-        </CarouselContainer>
-      </Overlay>
+        <OverlayBanner
+          src={this.props.imgs[this.state.centerImageIndex]}
+          render={this.props.renderBanner}
+          index={this.state.centerImageIndex}
+          imgs={this.props.imgs}
+          displayCarouselButtons={this.props.displayButtons}
+          handleLeftClick={this.handleLeftClick}
+          handleRightClick={this.handleRightClick}
+        >
+        {this.props.children}
+        </OverlayBanner>
+        {this.props.displayCarousel ? (
+          <OverlayCarousel
+            handleImageClick={this.handleImageClick}
+            display={this.props.displayCarousel}
+            imgs={this.props.imgs}
+            render={this.props.renderCarousel}
+          />
+        ) : null}
+      </OverlayContainer>
     );
   }
 }
 
-GalleryOverlay.defaultProps = {
+Overlay.defaultProps = {
   overlay: false,
   src: '/',
   imgs: [],
+  displayCarousel: false,
+  renderButtons: true
 };
 
-export default GalleryOverlay;
+export default Overlay;

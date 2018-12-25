@@ -1,7 +1,7 @@
 /* a styled magnifying glass */
 import React from 'react';
 
-import { MagnifyingGlass } from '../styled-components/GalleryStyles.jsx';
+import { MagnifyingGlass } from '../styled-components/ProductGalleryStyles.jsx';
 
 const MAGNIFYING_GLASS_URL =
   'https://image.flaticon.com/icons/svg/181/181561.svg';

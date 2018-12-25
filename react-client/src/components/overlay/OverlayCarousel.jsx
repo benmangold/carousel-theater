@@ -4,16 +4,14 @@ import {
   CarouselSection,
   CarouselWrapper,
   CarouselImageWrapper,
-} from '../styled-components/overlay/OverlayStyles.jsx';
+} from '../styled-components/overlay/CarouselStyles.jsx';
 
 export default props => {
-  return (
+  return props.display ? 
     <CarouselWrapper>
-      <CarouselSection>
-        <CarouselImageWrapper>
-          {props.render(props)}
-        </CarouselImageWrapper>
-      </CarouselSection>
+      {/* <CarouselSection> */}
+        <CarouselImageWrapper>{props.render(props)}</CarouselImageWrapper>
+      {/* </CarouselSection> */}
     </CarouselWrapper>
-  );
+   : null;
 };

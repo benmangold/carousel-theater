@@ -6,10 +6,12 @@ import axios from 'axios';
 import NotFound from './NotFound.jsx';
 
 import OverlayRenderer from '../overlay/OverlayRenderer.jsx';
+import OverlayProvider from '../overlay/OverlayProvider.jsx';
 
 import ProductImage from './ProductImage.jsx';
 import ProductBanner from './ProductBanner.jsx';
 import ProductCarousel from './ProductCarousel.jsx';
+
 
 class ProductGallery extends React.Component {
   constructor(props) {
@@ -51,18 +53,15 @@ class ProductGallery extends React.Component {
   render() {
     return (
       <div>
-        <NotFound fourOhFour={this.state.fourOhFour}/>
+        <NotFound fourOhFour={this.state.fourOhFour} />
 
-        <OverlayFragment
-          // render what triggers the overlay
-          render={() => {
-            return (
-              <ProductImage
-                scrollOverDisplay={this.state.scrollOverDisplay}
-                bannerImg={this.state.bannerImg}
-              />
-            );
-          }}
+        <OverlayRenderer
+          render={() => (
+            <ProductImage
+              scrollOverDisplay={this.state.scrollOverDisplay}
+              bannerImg={this.state.bannerImg}
+            />
+          )}
           // render what is in the overlay
           renderBanner={() => (
             <ProductBanner bannerImg={this.state.bannerImg} />
@@ -71,6 +70,24 @@ class ProductGallery extends React.Component {
             <ProductCarousel carouselImgs={this.state.carouselImgs} />
           )}
         />
+
+        {/* <OverlayRenderer
+          render={() =>
+            this.state.carouselImgs.map((item, index) => (
+              <ProductImage
+                scrollOverDisplay={this.state.scrollOverDisplay}
+                src={item}
+              />
+            ))
+          }
+        /> */}
+
+        <OverlayProvider>
+          <div>Hi 1</div>
+          <div>Hi 2</div>
+          <div>Hi 3</div>
+          <img src='https://i.imgur.com/K9PPMZK.jpg'></img>
+        </OverlayProvider>
       </div>
     );
   }

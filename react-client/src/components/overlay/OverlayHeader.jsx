@@ -4,16 +4,12 @@ const X_BUTTON_URL= 'https://cdn3.iconfinder.com/data/icons/iconic-1/32/x_alt-51
 const IMAGE = 'image'
 
 import {
-  CarouselHeader,
+  OverlayHeader,
   ButtonExit,
 } from '../styled-components/overlay/OverlayStyles.jsx';
 
 export default props => (
-  <CarouselHeader>
-    <ButtonExit
-      onClick={props.handleExit}
-      type={IMAGE}
-      src={X_BUTTON_URL}
-    />
-  </CarouselHeader>
+  <OverlayHeader>
+    {props.render()}
+  </OverlayHeader>
 );
