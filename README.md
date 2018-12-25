@@ -12,7 +12,7 @@ React, Node.js, MongoDB
 
 [gist with sample request](https://gist.github.com/benmangold/e686d23d396359a2a1314d489b799cbd)
 
-# Continuing Development
+## Continuing Development
 
 Occurs on dev branch, which will periodically PR into master
 
@@ -20,7 +20,7 @@ Branch off of dev, naming the branch after a ticket on trello
 
 [trello task board](https://trello.com/b/klbDbr5E/dd-gallery)
 
-# Component Usage
+## Component Usage
 
 Overlay Provider
 
@@ -45,7 +45,7 @@ Overlay Renderer
 />
 ```
 
-# Running Web Service Locally
+## Running Web Service Locally
 
 ```
 $ npm install
@@ -53,7 +53,7 @@ $ npm run server-dev
 $ npm run react-dev
 ```
 
-# Seed Local MongoDB
+## Seed Local MongoDB
 
 Make sure MongoDB is installed and running at mongodb://127.0.0.1:27017
 The app is configured to use:
@@ -65,7 +65,7 @@ The app is configured to use:
 $ npm run seed
 ```
 
-# Web Service Deployment
+## Web Service Deployment
 
 Required: DB_PROVIDER env variable must be available in production enviornment, pointing to prodcution db
 
