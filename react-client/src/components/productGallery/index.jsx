@@ -12,7 +12,6 @@ import ProductImage from './ProductImage.jsx';
 import ProductBanner from './ProductBanner.jsx';
 import ProductCarousel from './ProductCarousel.jsx';
 
-
 class ProductGallery extends React.Component {
   constructor(props) {
     super(props);
@@ -55,7 +54,7 @@ class ProductGallery extends React.Component {
       <div>
         <NotFound fourOhFour={this.state.fourOhFour} />
 
-        <OverlayRenderer
+        {/* <OverlayRenderer
           render={() => (
             <ProductImage
               scrollOverDisplay={this.state.scrollOverDisplay}
@@ -68,6 +67,20 @@ class ProductGallery extends React.Component {
           )}
           renderCarousel={() => (
             <ProductCarousel carouselImgs={this.state.carouselImgs} />
+          )}
+        /> */}
+
+        <OverlayRenderer
+          // overlay trigger
+          render={() => (
+            <div>Click me</div>
+          )}
+          // overlay content
+          renderBanner={() => (
+            <div>Big image</div>
+          )}
+          renderCarousel={() => (
+            [<div>Carousel List</div>]
           )}
         />
 
@@ -86,7 +99,7 @@ class ProductGallery extends React.Component {
           <div>Hi 1</div>
           <div>Hi 2</div>
           <div>Hi 3</div>
-          <img src='https://i.imgur.com/K9PPMZK.jpg'></img>
+          <img src='https://i.imgur.com/K9PPMZK.jpg' />
         </OverlayProvider>
       </div>
     );
