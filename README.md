@@ -1,4 +1,4 @@
-# carousel-theater image gallery
+# overlay-theater image gallery
 
 ## by Ben Mangold
 

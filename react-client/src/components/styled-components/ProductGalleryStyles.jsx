@@ -1,4 +1,3 @@
-
 import styled from 'styled-components';
 
 const ImageContainer = styled.div`
@@ -10,6 +9,8 @@ const Image = styled.img`
 `;
 
 const ImageStyles = styled.div`
+  position: relative;
+
   width: 100%;
   max-height: 60%;
 `;

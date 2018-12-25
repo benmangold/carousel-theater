@@ -54,11 +54,12 @@ class ProductGallery extends React.Component {
       <div>
         <NotFound fourOhFour={this.state.fourOhFour} />
 
-        {/* <OverlayRenderer
+        <OverlayRenderer
           render={() => (
             <ProductImage
               scrollOverDisplay={this.state.scrollOverDisplay}
               bannerImg={this.state.bannerImg}
+              
             />
           )}
           // render what is in the overlay
@@ -68,39 +69,7 @@ class ProductGallery extends React.Component {
           renderCarousel={() => (
             <ProductCarousel carouselImgs={this.state.carouselImgs} />
           )}
-        /> */}
-
-        <OverlayRenderer
-          // overlay trigger
-          render={() => (
-            <div>Click me</div>
-          )}
-          // overlay content
-          renderBanner={() => (
-            <div>Big image</div>
-          )}
-          renderCarousel={() => (
-            [<div>Carousel List</div>]
-          )}
         />
-
-        {/* <OverlayRenderer
-          render={() =>
-            this.state.carouselImgs.map((item, index) => (
-              <ProductImage
-                scrollOverDisplay={this.state.scrollOverDisplay}
-                src={item}
-              />
-            ))
-          }
-        /> */}
-
-        <OverlayProvider>
-          <div>Hi 1</div>
-          <div>Hi 2</div>
-          <div>Hi 3</div>
-          <img src='https://i.imgur.com/K9PPMZK.jpg' />
-        </OverlayProvider>
       </div>
     );
   }

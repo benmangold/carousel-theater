@@ -13,12 +13,7 @@ export default class Provider extends React.Component {
   render() {
     return React.Children.toArray(this.props.children).map((child, index) => {
       return (
-        <div
-          id={index}
-          onClick={e => {
-            console.log(e.target);
-          }}
-        >
+        <div key={index}>
           <OverlayRenderer
             render={() => <div />}
             renderBanner={() => <div />}
@@ -26,11 +21,7 @@ export default class Provider extends React.Component {
             displayButtons={false}
           >
             <ImageContainer>
-              <ImageStyles>
-
-            {child}
-
-              </ImageStyles>
+              <ImageStyles>{child}</ImageStyles>
             </ImageContainer>
           </OverlayRenderer>
         </div>

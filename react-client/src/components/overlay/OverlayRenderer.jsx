@@ -33,7 +33,7 @@ export default class OverlayRenderer extends React.Component {
           handleExit={this.turnOverlayOff}
           render={this.props.render}
           renderBanner={this.props.renderBanner}
-          renderButtons={this.props.renderButtons}
+          renderButtons={true}
           renderCarousel={this.props.renderCarousel}
           displayCarousel={true}
           imgs={this.props.carouselImgs}

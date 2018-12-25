@@ -5,7 +5,6 @@ import MagnifyingGlass from './MagnifyingGlass.jsx';
 
 export default props => {
   return props.carouselImgs.map((item, index, collection) => {
-    // return <CarouselImage key={index} src={item} index={index} />;
     return (
       <ScrollOverImage
         src={item}

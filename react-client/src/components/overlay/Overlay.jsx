@@ -55,17 +55,16 @@ class Overlay extends React.Component {
             />
           )}
         />
-
         <OverlayBanner
           src={this.props.imgs[this.state.centerImageIndex]}
           render={this.props.renderBanner}
           index={this.state.centerImageIndex}
           imgs={this.props.imgs}
-          displayCarouselButtons={this.props.displayButtons}
+          displayCarouselButtons={this.props.renderButtons}
           handleLeftClick={this.handleLeftClick}
           handleRightClick={this.handleRightClick}
         >
-        {this.props.children}
+          {this.props.children}
         </OverlayBanner>
         {this.props.displayCarousel ? (
           <OverlayCarousel
@@ -85,7 +84,7 @@ Overlay.defaultProps = {
   src: '/',
   imgs: [],
   displayCarousel: false,
-  renderButtons: true
+  renderButtons: true,
 };
 
 export default Overlay;
