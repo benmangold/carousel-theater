@@ -1,4 +1,5 @@
 # carousel-theater image gallery
+
 ## by Ben Mangold
 
 A full stack image gallery component with image carousel implemented in React
@@ -11,7 +12,6 @@ React, Node.js, MongoDB
 
 [gist with sample request](https://gist.github.com/benmangold/e686d23d396359a2a1314d489b799cbd)
 
-
 # Continuing Development
 
 Occurs on dev branch, which will periodically PR into master
@@ -22,31 +22,27 @@ Branch off of dev, naming the branch after a ticket on trello
 
 # Component Usage
 
-Overlay Provider 
-```
-        <OverlayProvider>
-          <div>Hi 1</div>
-          <div>Hi 2</div>
-          <div>Hi 3</div>
-          <img src='https://i.imgur.com/K9PPMZK.jpg'></img>
-        </OverlayProvider>
+Overlay Provider
+
+```javascript
+<OverlayProvider>
+  <div>Hi 1</div>
+  <div>Hi 2</div>
+  <div>Hi 3</div>
+  <img src='https://i.imgur.com/K9PPMZK.jpg' />
+</OverlayProvider>
 ```
 
 Overlay Renderer
-```
-        <OverlayRenderer
-          // overlay trigger
-          render={() => (
-            <div>Click me</div>
-          )}
-          // overlay content
-          renderBanner={() => (
-            <div>Big image</div>
-          )}
-          renderCarousel={() => (
-            [<div>Carousel List</div>]
-          )}
-        />
+
+```javascript
+<OverlayRenderer
+  // overlay trigger
+  render={() => <div>Click me</div>}
+  // overlay content
+  renderBanner={() => <div>Big image</div>}
+  renderCarousel={() => [<div>Carousel List</div>]}
+/>
 ```
 
 # Running Web Service Locally
@@ -72,6 +68,7 @@ $ npm run seed
 # Web Service Deployment
 
 Required: DB_PROVIDER env variable must be available in production enviornment, pointing to prodcution db
+
 ```
 ex on ec2: ec2-instance$ export DB_PROVIDER=mongodb://<un>:<pw>@ds249583.mlab.com:49583/delta-drop
 ```
