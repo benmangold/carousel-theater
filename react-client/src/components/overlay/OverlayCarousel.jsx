@@ -7,11 +7,11 @@ import {
 } from '../styled-components/overlay/CarouselStyles.jsx';
 
 export default props => {
-  return props.display ? 
-    <CarouselWrapper>
-      {/* <CarouselSection> */}
-        <CarouselImageWrapper>{props.render(props)}</CarouselImageWrapper>
-      {/* </CarouselSection> */}
-    </CarouselWrapper>
-   : null;
+  return props.display ? (
+    <div>
+      <CarouselSection>
+      <CarouselImageWrapper>{props.render(props)}</CarouselImageWrapper>
+      </CarouselSection>
+    </div>
+  ) : null;
 };

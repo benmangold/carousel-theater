@@ -8,8 +8,10 @@ import {
 } from '../styled-components/ProductGalleryStyles.jsx';
 
 export default props => (
-  <ImageContainer>
-    <Image src={props.src} />
-    {props.scrollOverDisplay ? props.renderScrollOverDisplay() : null}
-  </ImageContainer>
+  <React.Fragment>
+    <ImageContainer>
+      <Image src={props.src} />
+      {props.scrollOverDisplay ? props.renderScrollOverDisplay() : null}
+    </ImageContainer>
+  </React.Fragment>
 );

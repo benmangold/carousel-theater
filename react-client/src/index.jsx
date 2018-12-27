@@ -9,20 +9,20 @@ ReactDom.render(
   <div>
     <ProductGallery />
 
-    <OverlayRenderer
+    {/* <OverlayRenderer
       // overlay trigger
       render={() => <div>Click me</div>}
       // overlay content
       renderBanner={() => <div>Big image</div>}
       renderCarousel={() => [<div>Carousel List</div>]}
-    />
+    /> */}
 
-    <OverlayProvider>
+    {/* <OverlayProvider>
       <div>Hi 1</div>
       <div>Hi 2</div>
       <div>Hi 3</div>
       <img src='https://i.imgur.com/K9PPMZK.jpg' />
-    </OverlayProvider>
+    </OverlayProvider> */}
   </div>,
   document.getElementById('gallery')
 );

@@ -1,7 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import OverlayRenderer from './OverlayRenderer.jsx';
+
+import styled from 'styled-components';
+
+const CenteredDiv = styled.div`
+  margin: 0 auto;
+  position: relative;
+`;
 
 import {
   ImageContainer,
@@ -13,7 +19,7 @@ export default class Provider extends React.Component {
   render() {
     return React.Children.toArray(this.props.children).map((child, index) => {
       return (
-        <div key={index}>
+        <CenteredDiv key={index}>
           <OverlayRenderer
             render={() => <div />}
             renderBanner={() => <div />}
@@ -24,7 +30,7 @@ export default class Provider extends React.Component {
               <ImageStyles>{child}</ImageStyles>
             </ImageContainer>
           </OverlayRenderer>
-        </div>
+        </CenteredDiv>
       );
     });
   }

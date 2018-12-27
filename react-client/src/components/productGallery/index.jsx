@@ -44,7 +44,7 @@ class ProductGallery extends React.Component {
             fourOhFour: true,
           });
         } else {
-          console.error(error);
+          // console.error(err);
         }
       });
   }
@@ -59,10 +59,8 @@ class ProductGallery extends React.Component {
             <ProductImage
               scrollOverDisplay={this.state.scrollOverDisplay}
               bannerImg={this.state.bannerImg}
-              
             />
           )}
-          // render what is in the overlay
           renderBanner={() => (
             <ProductBanner bannerImg={this.state.bannerImg} />
           )}
