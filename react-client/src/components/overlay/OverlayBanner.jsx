@@ -1,8 +1,9 @@
 import React from 'react';
 
+import styled from 'styled-components'
+
 import {
-  CenterImage, // we may need some of these styles
-  BannerSpacer,
+  CenterDiv, // we may need some of these styles
   BannerContainer,
   BannerWrapper,
 } from '../styled-components/overlay/BannerStyles.jsx';
@@ -12,9 +13,14 @@ import {
   ButtonRight,
 } from '../styled-components/overlay/OverlayStyles.jsx';
 
+
+const BannerSpacer = styled.div`
+  margin-top: 10px;
+`;
+
 export default props => {
   return (
-    <div>
+    <CenterDiv>
       <BannerSpacer />
       <BannerWrapper>
         {props.render()}
@@ -36,6 +42,6 @@ export default props => {
         ) : null}
       </BannerWrapper>
       <BannerSpacer />
-    </div>
+    </CenterDiv>
   );
 };

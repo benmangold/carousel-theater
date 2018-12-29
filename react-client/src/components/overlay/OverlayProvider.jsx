@@ -6,15 +6,9 @@ import styled from 'styled-components';
 
 const CenteredDiv = styled.div`
   margin: 0 auto;
-  position: relative;
 `;
 
-import {
-  ImageContainer,
-  ImageStyles,
-} from '../styled-components/ProductGalleryStyles.jsx';
-
-export default class Provider extends React.Component {
+export default class OverlayProvider extends React.Component {
   // Render the child component
   render() {
     return React.Children.toArray(this.props.children).map((child, index) => {
@@ -26,9 +20,7 @@ export default class Provider extends React.Component {
             renderCarousel={() => <div />}
             displayButtons={false}
           >
-            <ImageContainer>
-              <ImageStyles>{child}</ImageStyles>
-            </ImageContainer>
+            {child}
           </OverlayRenderer>
         </CenteredDiv>
       );

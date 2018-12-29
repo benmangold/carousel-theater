@@ -1,16 +1,22 @@
+/* render product images in a full screen overlay with a carousel */
 /* fetches product data and renders product gallery */
 
 import React from 'react';
 import axios from 'axios';
 
+import styled from 'styled-components';
+
 import NotFound from './NotFound.jsx';
 
 import OverlayRenderer from '../overlay/OverlayRenderer.jsx';
-import OverlayProvider from '../overlay/OverlayProvider.jsx';
+import ScrollOverProvider from '../scrollOver/ScrollOverProvider.jsx';
 
-import ProductImage from './ProductImage.jsx';
-import ProductBanner from './ProductBanner.jsx';
-import ProductCarousel from './ProductCarousel.jsx';
+import { CarouselImage } from '../styled-components/overlay/CarouselStyles.jsx';
+
+const Image = styled.img`
+  width: 100%;
+  max-height: 60%;
+`;
 
 class ProductGallery extends React.Component {
   constructor(props) {
@@ -56,17 +62,20 @@ class ProductGallery extends React.Component {
 
         <OverlayRenderer
           render={() => (
-            <ProductImage
-              scrollOverDisplay={this.state.scrollOverDisplay}
-              bannerImg={this.state.bannerImg}
-            />
+            <ScrollOverProvider>
+              <Image src={this.state.bannerImg} />
+            </ScrollOverProvider>
           )}
-          renderBanner={() => (
-            <ProductBanner bannerImg={this.state.bannerImg} />
-          )}
-          renderCarousel={() => (
-            <ProductCarousel carouselImgs={this.state.carouselImgs} />
-          )}
+          renderBanner={() => <Image src={this.state.bannerImg} />}
+          renderCarousel={() =>
+            this.state.carouselImgs.map((img, index, collection) => {
+              return (
+                <ScrollOverProvider>
+                  <CarouselImage key={index} src={img} />
+                </ScrollOverProvider>
+              );
+            })
+          }
         />
       </div>
     );

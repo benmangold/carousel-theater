@@ -42,7 +42,7 @@ const ButtonExit = styled.input`
   z-index: 3;
   height: 44px;
   float: right;
-  position: absolute ;
+  position: absolute;
   display: block;
   top: 3%
   left:93%

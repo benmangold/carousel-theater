@@ -14,7 +14,7 @@ import OverlayCarousel from './OverlayCarousel.jsx';
 const X_BUTTON_URL =
   'https://cdn3.iconfinder.com/data/icons/iconic-1/32/x_alt-512.png';
 const IMAGE = 'image';
-class Overlay extends React.Component {
+export default class Overlay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -85,6 +85,9 @@ Overlay.defaultProps = {
   imgs: [],
   displayCarousel: false,
   renderButtons: true,
+  render: () => null,
+  renderBanner: () => null,
+  renderCarousel: () => null,
 };
 
-export default Overlay;
+// export default Overlay;

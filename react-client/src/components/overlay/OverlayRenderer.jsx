@@ -19,7 +19,6 @@ export default class OverlayRenderer extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       // render single item overlay ~ SimpleOverlay ~ no carousel or lr buttons
       // render array of items overlay ~ CarouselOverlay ~ carousel and lr buttons
