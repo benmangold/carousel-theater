@@ -11,9 +11,9 @@ import NotFound from './NotFound.jsx';
 import OverlayRenderer from '../overlay/OverlayRenderer.jsx';
 import ScrollOverProvider from '../scrollOver/ScrollOverProvider.jsx';
 
-import { CarouselImage } from '../styled-components/overlay/CarouselStyles.jsx';
+import { CarouselImage } from '../styled-components/CarouselStyles.jsx';
 
-import { ButtonUp } from '../styled-components/overlay/OverlayStyles.jsx'
+import { ButtonUp } from '../styled-components/ButtonStyles.jsx'
 
 const Image = styled.img`
   width: 100%;

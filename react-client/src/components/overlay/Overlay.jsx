@@ -2,10 +2,9 @@
 
 import React from 'react';
 
-import {
-  OverlayContainer,
-  ButtonExit,
-} from '../styled-components/overlay/OverlayStyles.jsx';
+import {OverlayContainer} from '../styled-components/OverlayStyles.jsx';
+
+import {ButtonExit} from '../styled-components/ButtonStyles.jsx';
 
 import OverlayHeader from './OverlayHeader.jsx';
 import OverlayBanner from './OverlayBanner.jsx';
@@ -89,5 +88,3 @@ Overlay.defaultProps = {
   renderBanner: () => null,
   renderCarousel: () => null,
 };
-
-// export default Overlay;

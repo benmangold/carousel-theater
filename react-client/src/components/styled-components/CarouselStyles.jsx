@@ -12,10 +12,10 @@ const CarouselWrapper = styled.div`
 
 const CarouselImage = styled.img`
   display: inline-block;
-  position: relative;
   margin: auto;
   width: 120px;
   float: left;
+  position: relative;
   padding: 5px;
 `;
 

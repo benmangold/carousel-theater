@@ -4,7 +4,7 @@ import {
   CarouselSection,
   CarouselWrapper,
   CarouselImageWrapper,
-} from '../styled-components/overlay/CarouselStyles.jsx';
+} from '../styled-components/CarouselStyles.jsx';
 
 export default props => {
   return props.display ? (

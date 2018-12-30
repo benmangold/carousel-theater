@@ -1,8 +1,14 @@
 # overlay-theater image gallery
 
+## reusable react components to build image galleries for ecommerce
+
+## 
+
 ## by Ben Mangold
 
-A full stack image gallery component with image carousel implemented in React
+Tools to build 
+
+Includes a full stack image gallery component with image carousel implemented in React
 
 A web service and db are provided with scripts to seed the db and serve the component
 
@@ -45,6 +51,14 @@ Overlay Renderer
 />
 ```
 
+Scrollover Provider
+
+```javascript
+<ScrollOverProvider>
+  <img src='https://i.imgur.com/ZfnIxu8.png' />
+</ScrollOverProvider>
+```
+
 ## Running Web Service Locally
 
 ```
@@ -58,8 +72,8 @@ $ npm run react-dev
 Make sure MongoDB is installed and running at mongodb://127.0.0.1:27017
 The app is configured to use:
 
-`databse: deltaDrop`
-`collection: products`
+database: deltaDrop
+collection: products
 
 ```
 $ npm run seed

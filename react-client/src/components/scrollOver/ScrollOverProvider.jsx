@@ -3,7 +3,7 @@ import React from 'react';
 import {
   ScrollOverContainer,
   ScrollOverContent,
-} from './styled-components/ScrollOverStyles.jsx';
+} from '../styled-components/ScrollOverStyles.jsx';
 
 const MAGNIFYING_GLASS_URL =
   'https://image.flaticon.com/icons/svg/181/181561.svg';

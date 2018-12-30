@@ -27,7 +27,7 @@ ReactDom.render(
       <img src='https://i.imgur.com/ZfnIxu8.png' />
     </OverlayProvider>
 
-    <ScrollOverProvider size={'256px'}>
+    <ScrollOverProvider >
       <img src='https://i.imgur.com/ZfnIxu8.png' />
     </ScrollOverProvider>
   </div>,

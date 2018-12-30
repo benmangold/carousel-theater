@@ -20,8 +20,8 @@ const Button = styled.img`
   position: absolute;
   margin: 0 auto;
   left: 0%;
-  height: ${props => (props.size ? props.size : '32px')};
-  width: ${props => (props.size ? props.size : '32px')};
+  height: ${props => (props.size ? props.size : '64px')};
+  width: ${props => (props.size ? props.size : '64px')};
   opacity: 0.1;
 `;
 
@@ -69,9 +69,5 @@ const OverlayHeader = styled.div`
 
 export {
   OverlayContainer,
-  ButtonLeft,
-  ButtonRight,
-  ButtonExit,
   OverlayHeader,
-  ButtonUp,
 };

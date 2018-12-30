@@ -3,15 +3,14 @@ import React from 'react';
 import styled from 'styled-components'
 
 import {
-  CenterDiv, // we may need some of these styles
-  BannerContainer,
+  CenterDiv,
   BannerWrapper,
-} from '../styled-components/overlay/BannerStyles.jsx';
+} from '../styled-components/BannerStyles.jsx';
 
 import {
   ButtonLeft,
   ButtonRight,
-} from '../styled-components/overlay/OverlayStyles.jsx';
+} from '../styled-components/ButtonStyles.jsx';
 
 
 const BannerSpacer = styled.div`
