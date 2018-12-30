@@ -13,9 +13,17 @@ import ScrollOverProvider from '../scrollOver/ScrollOverProvider.jsx';
 
 import { CarouselImage } from '../styled-components/overlay/CarouselStyles.jsx';
 
+import { ButtonUp } from '../styled-components/overlay/OverlayStyles.jsx'
+
 const Image = styled.img`
   width: 100%;
   max-height: 60%;
+`;
+
+const BannerContainer = styled.div`
+  max-height: 1200px;
+  width: 100%
+  max-height: 60%
 `;
 
 class ProductGallery extends React.Component {
@@ -63,14 +71,24 @@ class ProductGallery extends React.Component {
         <OverlayRenderer
           render={() => (
             <ScrollOverProvider>
-              <Image src={this.state.bannerImg} />
+              <BannerContainer>
+                <Image src={this.state.bannerImg} />
+              </BannerContainer>
             </ScrollOverProvider>
           )}
           renderBanner={() => <Image src={this.state.bannerImg} />}
           renderCarousel={() =>
             this.state.carouselImgs.map((img, index, collection) => {
               return (
-                <ScrollOverProvider>
+                <ScrollOverProvider
+                  zIndex={4}
+                  size={'32px'}
+                  render={() => (
+                    <ButtonUp
+                      src='https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/01_arrow_left-128.png'
+                    />
+                  )}
+                >
                   <CarouselImage key={index} src={img} />
                 </ScrollOverProvider>
               );

@@ -1,21 +1,27 @@
 import React from 'react';
 
-import MagnifyingGlass from './MagnifyingGlass.jsx'
+import {
+  ScrollOverContainer,
+  ScrollOverContent,
+} from './styled-components/ScrollOverStyles.jsx';
 
-import {ScrollOverContainer} from './styled-components/ScrollOverStyles.jsx'
-// const ScrollOverContainer = styled.div`
-//   position: relative;
-// `;
-
+const MAGNIFYING_GLASS_URL =
+  'https://image.flaticon.com/icons/svg/181/181561.svg';
 export default class ScrollOverProvider extends React.Component {
   render() {
     return React.Children.toArray(this.props.children).map((child, index) => {
       return (
-        <ScrollOverContainer>
-          {this.props.render ? this.props.render() : <MagnifyingGlass/>}
+        <ScrollOverContainer key={index}>
+          <ScrollOverContent zIndex={this.props.zIndex} size={this.props.size}>
+            {this.props.render ? (
+              this.props.render()
+            ) : (
+              <img src={MAGNIFYING_GLASS_URL} />
+            )}
+          </ScrollOverContent>
           {child}
         </ScrollOverContainer>
-      )
-    })
+      );
+    });
   }
 }

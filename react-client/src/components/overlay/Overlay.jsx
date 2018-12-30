@@ -60,7 +60,7 @@ export default class Overlay extends React.Component {
           render={this.props.renderBanner}
           index={this.state.centerImageIndex}
           imgs={this.props.imgs}
-          displayCarouselButtons={this.props.renderButtons}
+          displayCarouselButtons={this.props.displayButtons}
           handleLeftClick={this.handleLeftClick}
           handleRightClick={this.handleRightClick}
         >
@@ -84,7 +84,7 @@ Overlay.defaultProps = {
   src: '/',
   imgs: [],
   displayCarousel: false,
-  renderButtons: true,
+  displayButtons: true,
   render: () => null,
   renderBanner: () => null,
   renderCarousel: () => null,

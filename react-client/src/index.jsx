@@ -5,7 +5,7 @@ import ProductGallery from './components/productGallery/index.jsx';
 import OverlayProvider from './components/overlay/OverlayProvider.jsx';
 import OverlayRenderer from './components/overlay/OverlayRenderer.jsx';
 
-import ScrollOverProvider from './components/scrollOver/ScrollOverProvider.jsx'
+import ScrollOverProvider from './components/scrollOver/ScrollOverProvider.jsx';
 
 ReactDom.render(
   <div>
@@ -27,14 +27,11 @@ ReactDom.render(
       <img src='https://i.imgur.com/ZfnIxu8.png' />
     </OverlayProvider>
 
-
-    <ScrollOverProvider>
-      <div>Scroll Over</div>
+    <ScrollOverProvider size={'256px'}>
       <img src='https://i.imgur.com/ZfnIxu8.png' />
     </ScrollOverProvider>
-
   </div>,
   document.getElementById('gallery')
 );
 
-export { OverlayProvider, OverlayRenderer };
+export { OverlayProvider, OverlayRenderer, ScrollOverProvider };

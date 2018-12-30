@@ -4,19 +4,19 @@ const ScrollOverContainer = styled.div`
   position: relative;
 `;
 
-const MagnifyingGlass = styled.img`
-  z-index:4;
+const ScrollOverContent = styled.div`
+  z-index: ${props => props.zIndex ? props.zIndex : 0}
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  height: 15%;
-  width: 15%;
+  height: ${props => props.size ? props.size: '64px'};
+  width: ${props => props.size ? props.size: '64px'};
   opacity: 0;
   ${ScrollOverContainer}:hover & {
     opacity: 1;
   }
 `;
 
-export { ScrollOverContainer, MagnifyingGlass };
+export { ScrollOverContent, ScrollOverContainer };

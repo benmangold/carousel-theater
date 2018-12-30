@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const CenterDiv = styled.div`
   position: relative;
-  display: block;
+  display: inline-block;
+  text-align: center;
   margin: auto;
 `;
-
 
 const BannerContainer = styled.div`
   position: relative;
@@ -13,13 +13,17 @@ const BannerContainer = styled.div`
   max-height: 65vh;
 `;
 
-const BannerWrapper = styled.span`
+const BannerWrapper = styled.div`
   width: 100%;
   position: fixed;
   margin: 0 auto;
-  top: 20%;
+
+  overflow: auto;
+  top: 15%;
   display: inline-block;
   box-sizing: inherit;
+  max-height: 50vh;
+  max-width: 100vw;
 `;
 
 export { CenterDiv, BannerContainer, BannerWrapper };

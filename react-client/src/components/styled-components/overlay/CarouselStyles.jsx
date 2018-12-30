@@ -33,7 +33,6 @@ const CarouselImageWrapper = styled.div`
   clear: both;
 `;
 
-
 export {
   CarouselSection,
   CarouselWrapper,

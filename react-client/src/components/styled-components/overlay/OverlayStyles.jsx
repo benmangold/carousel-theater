@@ -12,30 +12,39 @@ const OverlayContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.9);
 `;
 
-const Button = styled.input`
-input:focus{
-  outline: none;
-}
-z-index: 3;
-height: 17%
-position: absolute;
-top: 39%;
-opacity: 0.1;
+const Button = styled.img`
+  input:focus {
+    outline: none;
+  }
+  z-index: 3;
+  position: absolute;
+  margin: 0 auto;
+  left: 0%;
+  height: ${props => (props.size ? props.size : '32px')};
+  width: ${props => (props.size ? props.size : '32px')};
+  opacity: 0.1;
 `;
 
 const ButtonLeft = styled(Button)`
   :hover {
-    opacity: 1;
+    opacity: .7;
   }
+  top: 39%;
   left: 4%;
 `;
 
 const ButtonRight = styled(Button)`
-  left: 90%
-  transform: rotate(180deg);
   :hover {
-    opacity: 1;
+    opacity: .7;
   }
+  left: 92%
+  top: 39%;
+  transform: rotate(180deg);
+`;
+
+const ButtonUp = styled(Button)`
+  z-index: 4;
+  transform: rotate(90deg);
 `;
 
 const ButtonExit = styled.input`
@@ -58,4 +67,11 @@ const OverlayHeader = styled.div`
   margin: 0 10px 10px;
 `;
 
-export { OverlayContainer, ButtonLeft, ButtonRight, ButtonExit, OverlayHeader };
+export {
+  OverlayContainer,
+  ButtonLeft,
+  ButtonRight,
+  ButtonExit,
+  OverlayHeader,
+  ButtonUp,
+};

@@ -7,8 +7,6 @@ import {
 } from '../styled-components/overlay/CarouselStyles.jsx';
 
 export default props => {
-  console.log('!')
-  console.log(props)
   return props.display ? (
     <div>
       <CarouselSection>
