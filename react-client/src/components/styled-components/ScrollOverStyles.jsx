@@ -6,19 +6,18 @@ const ScrollOverContainer = styled.div`
 `;
 
 const ScrollOverContent = styled.div`
-margin: 0 auto;
-float: left;
+  margin: 0 auto;
   z-index: ${props => (props.zIndex ? props.zIndex : 0)}
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: ${props => (props.top ? props.top : '50%')};
+  left: ${props => (props.left ? props.left : '50%')};
   transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  height: ${props => (props.size ? props.size : '10vw')};
-  width: ${props => (props.size ? props.size : '10vw')};
-  opacity: 0;
+  height: ${props => (props.size ? props.size : '10%')};
+  width: ${props => (props.size ? props.size : '10%')};
+  opacity: ${props => (props.opacity ? props.opacity : 0)};
   ${ScrollOverContainer}:hover & {
-    opacity: 1;
+    opacity: ${props => (props.opacityHover ? props.opacityHover : 1)};
   }
 `;
 

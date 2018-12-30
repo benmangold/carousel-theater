@@ -71,7 +71,7 @@ class ProductGallery extends React.Component {
         ) : (
           <OverlayRenderer
             render={() => (
-              <ScrollOverProvider>
+              <ScrollOverProvider size={'5vw'}>
                 <BannerContainer>
                   <Image src={this.state.bannerImg} />
                 </BannerContainer>
@@ -83,7 +83,6 @@ class ProductGallery extends React.Component {
                 return (
                   <ScrollOverProvider
                     zIndex={4}
-                    size={'32px'}
                     render={() => (
                       <ButtonUp src='https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/01_arrow_left-128.png' />
                     )}

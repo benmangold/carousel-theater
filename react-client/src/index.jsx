@@ -25,10 +25,13 @@ ReactDom.render(
       <div>Hi 2</div>
       <div>Hi 3</div>
       <img src='https://i.imgur.com/ZfnIxu8.png' />
+      <ScrollOverProvider>
+        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkuSDacQmSZJIcHDHwVxi0FNS667Q9eGa2AEWz4-uzjx4pKwC' />
+      </ScrollOverProvider>
     </OverlayProvider>
 
     <ScrollOverProvider>
-      <img src='https://i.imgur.com/ZfnIxu8.png' />
+      <img src='http://www.politicalmetaphors.com/wp-content/uploads/2015/04/blog-shapes-square-windows.jpg' />
     </ScrollOverProvider>
   </div>,
   document.getElementById('gallery')

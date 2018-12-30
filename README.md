@@ -1,16 +1,17 @@
 # overlay-theater image gallery
 
-## reusable react components for ecommerce
+## reusable react components for web dev
 
-## provide your components with useful css via styled-components
+## giving your components useful css via styled-components
 
 ## by Ben Mangold
 
-Tools to build 
+Tools to build
 
-Includes a full stack image gallery component with image carousel implemented in React
+Includes a full stack demo component
+`/react-client/src/productGallery/ProductGallery.jsx`
 
-A web service and db are provided with scripts to seed the db and serve the component
+A web service and db are provided with scripts to seed the demo db and serve the demo component
 
 React, Node.js, MongoDB
 
@@ -27,6 +28,14 @@ Branch off of dev, naming the branch after a ticket on trello
 [trello task board](https://trello.com/b/klbDbr5E/dd-gallery)
 
 ## Component Usage
+
+Scrollover Provider - display a centered image when moused over
+
+```javascript
+<ScrollOverProvider>
+  <img src='https://i.imgur.com/ZfnIxu8.png' />
+</ScrollOverProvider>
+```
 
 Overlay Provider - give each child a fullscreen overlay which displays the item when clicked
 
@@ -47,16 +56,22 @@ Overlay Renderer - render a fullscreen overlay with a carousel functionality to 
   render={() => <div>Click me</div>}
   // overlay content
   renderBanner={() => <div>Big image</div>}
-  renderCarousel={() => [<div>Carousel item 1</div>,<div>Carousel item 2</div>]}
+  renderCarousel={() => [
+    <div>Carousel item 1</div>,
+    <div>Carousel item 2</div>,
+  ]}
 />
 ```
 
-Scrollover Provider - display a centered image when moused over
+~TODO~
+Carousel Provider - give each child a fullscreen carousel overlay with all other children
 
 ```javascript
-<ScrollOverProvider>
-  <img src='https://i.imgur.com/ZfnIxu8.png' />
-</ScrollOverProvider>
+<CarouselProvider>
+  <div>Hi A</div>
+  <div>Hi B</div>
+  <div>Hi C</div>
+</CarouselProvider>
 ```
 
 ## Running Web Service Locally

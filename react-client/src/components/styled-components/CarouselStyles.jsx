@@ -1,5 +1,17 @@
 import styled from 'styled-components';
 
+/* used by product gallery */
+const CarouselImage = styled.img`
+  display: inline-block;
+  margin: auto;
+  width: 120px;
+  float: left;
+  position: relative;
+  padding: 5px;
+`;
+
+
+/* used by overlay library */
 const CarouselSection = styled.section`
   padding-left: 24px;
   padding-right: 24px;
@@ -8,15 +20,6 @@ const CarouselSection = styled.section`
 const CarouselWrapper = styled.div`
   display: block;
   box-sizing: inherit;
-`;
-
-const CarouselImage = styled.img`
-  display: inline-block;
-  margin: auto;
-  width: 120px;
-  float: left;
-  position: relative;
-  padding: 5px;
 `;
 
 const CarouselImageWrapper = styled.div`

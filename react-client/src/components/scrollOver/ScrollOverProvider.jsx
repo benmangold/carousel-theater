@@ -5,6 +5,7 @@ import {
   ScrollOverContent,
 } from '../styled-components/ScrollOverStyles.jsx';
 
+// default scroll-over content
 const MAGNIFYING_GLASS_URL =
   'https://image.flaticon.com/icons/svg/181/181561.svg';
 export default class ScrollOverProvider extends React.Component {
