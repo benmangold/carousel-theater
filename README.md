@@ -1,8 +1,8 @@
 # overlay-theater image gallery
 
-## reusable react components to build image galleries for ecommerce
+## reusable react components for ecommerce
 
-## 
+## provide your components with useful css via styled-components
 
 ## by Ben Mangold
 
@@ -28,7 +28,7 @@ Branch off of dev, naming the branch after a ticket on trello
 
 ## Component Usage
 
-Overlay Provider
+Overlay Provider - give each child a fullscreen overlay which displays the item when clicked
 
 ```javascript
 <OverlayProvider>
@@ -39,7 +39,7 @@ Overlay Provider
 </OverlayProvider>
 ```
 
-Overlay Renderer
+Overlay Renderer - render a fullscreen overlay with a carousel functionality to view a list of items
 
 ```javascript
 <OverlayRenderer
@@ -47,11 +47,11 @@ Overlay Renderer
   render={() => <div>Click me</div>}
   // overlay content
   renderBanner={() => <div>Big image</div>}
-  renderCarousel={() => [<div>Carousel List</div>]}
+  renderCarousel={() => [<div>Carousel item 1</div>,<div>Carousel item 2</div>]}
 />
 ```
 
-Scrollover Provider
+Scrollover Provider - display a centered image when moused over
 
 ```javascript
 <ScrollOverProvider>

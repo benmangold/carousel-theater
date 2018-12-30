@@ -13,7 +13,6 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 app.use(parser.json());
 
 /* Routes */
-
 app.get('/buy/:productName', (req, res) => {
   res.sendFile(path.resolve('react-client/dist/index.html'));
 });

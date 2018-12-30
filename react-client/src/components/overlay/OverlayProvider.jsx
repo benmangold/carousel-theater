@@ -2,14 +2,9 @@ import React from 'react';
 
 import OverlayRenderer from './OverlayRenderer.jsx';
 
-import styled from 'styled-components';
-
-const CenteredDiv = styled.div`
-  margin: 0 auto;
-`;
+import { CenteredDiv } from '../styled-components/OverlayStyles.jsx'
 
 export default class OverlayProvider extends React.Component {
-  // Render the child component
   render() {
     return React.Children.toArray(this.props.children).map((child, index) => {
       return (

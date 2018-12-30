@@ -13,7 +13,7 @@ import ScrollOverProvider from '../scrollOver/ScrollOverProvider.jsx';
 
 import { CarouselImage } from '../styled-components/CarouselStyles.jsx';
 
-import { ButtonUp } from '../styled-components/ButtonStyles.jsx'
+import { ButtonUp } from '../styled-components/ButtonStyles.jsx';
 
 const Image = styled.img`
   width: 100%;
@@ -66,35 +66,35 @@ class ProductGallery extends React.Component {
   render() {
     return (
       <div>
-        <NotFound fourOhFour={this.state.fourOhFour} />
-
-        <OverlayRenderer
-          render={() => (
-            <ScrollOverProvider>
-              <BannerContainer>
-                <Image src={this.state.bannerImg} />
-              </BannerContainer>
-            </ScrollOverProvider>
-          )}
-          renderBanner={() => <Image src={this.state.bannerImg} />}
-          renderCarousel={() =>
-            this.state.carouselImgs.map((img, index, collection) => {
-              return (
-                <ScrollOverProvider
-                  zIndex={4}
-                  size={'32px'}
-                  render={() => (
-                    <ButtonUp
-                      src='https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/01_arrow_left-128.png'
-                    />
-                  )}
-                >
-                  <CarouselImage key={index} src={img} />
-                </ScrollOverProvider>
-              );
-            })
-          }
-        />
+        {this.state.fourOhFour ? (
+          <NotFound fourOhFour={this.state.fourOhFour} />
+        ) : (
+          <OverlayRenderer
+            render={() => (
+              <ScrollOverProvider>
+                <BannerContainer>
+                  <Image src={this.state.bannerImg} />
+                </BannerContainer>
+              </ScrollOverProvider>
+            )}
+            renderBanner={() => <Image src={this.state.bannerImg} />}
+            renderCarousel={() =>
+              this.state.carouselImgs.map((img, index, collection) => {
+                return (
+                  <ScrollOverProvider
+                    zIndex={4}
+                    size={'32px'}
+                    render={() => (
+                      <ButtonUp src='https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/01_arrow_left-128.png' />
+                    )}
+                  >
+                    <CarouselImage key={index} src={img} />
+                  </ScrollOverProvider>
+                );
+              })
+            }
+          />
+        )}
       </div>
     );
   }

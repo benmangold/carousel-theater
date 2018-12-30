@@ -10,11 +10,7 @@ export default props => {
   return props.display ? (
     <div>
       <CarouselSection>
-        <CarouselImageWrapper>
-          {
-            props.render(props)
-          }
-        </CarouselImageWrapper>
+        <CarouselImageWrapper>{props.render(props)}</CarouselImageWrapper>
       </CarouselSection>
     </div>
   ) : null;

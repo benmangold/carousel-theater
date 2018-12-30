@@ -1,5 +1,5 @@
 import React from 'react';
-import NotFound from '../styled-components/NotFound.jsx';
+import NotFound from '../styled-components/NotFoundStyles.jsx';
 
 export default props => {
   return (
