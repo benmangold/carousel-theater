@@ -1,4 +1,5 @@
 /* This script seeds the db with testData data for the Image Gallery API */
+/* I am using mongodb locally with config from README.md */
 
 let db = require('./db/index.js');
 let testData = require('./server/testJson.js');
