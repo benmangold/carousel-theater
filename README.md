@@ -1,8 +1,8 @@
 # overlay-theater image gallery
 
-## reusable react components for web dev
+reusable react components for web dev
 
-## giving your components useful css via styled-components
+giving your components useful css via styled-components
 
 ## by Ben Mangold
 
