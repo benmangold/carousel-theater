@@ -2,7 +2,10 @@
 
 import React from 'react';
 import Overlay from './Overlay.jsx';
-
+import { ButtonExit } from '../styled-components/ButtonStyles.jsx';
+const X_BUTTON_URL =
+  'https://cdn3.iconfinder.com/data/icons/iconic-1/32/x_alt-512.png';
+const IMAGE = 'image';
 export default class OverlayRenderer extends React.Component {
   constructor(props) {
     super(props);
@@ -32,8 +35,11 @@ export default class OverlayRenderer extends React.Component {
           handleExit={this.turnOverlayOff}
           render={this.props.render}
           renderBanner={this.props.renderBanner}
-          displayButtons={this.props.displayButtons}
           renderCarousel={this.props.renderCarousel}
+          // renderHeader={() => {
+          //   <ButtonExit type={IMAGE} src={X_BUTTON_URL} />;
+          // }}
+          displayButtons={this.props.displayButtons}
           displayCarousel={true}
           imgs={this.props.carouselImgs}
         >

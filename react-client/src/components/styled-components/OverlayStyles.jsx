@@ -10,6 +10,7 @@ const OverlayContainer = styled.div`
   left: 0;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
 `;
 
 const CenteredDiv = styled.div`

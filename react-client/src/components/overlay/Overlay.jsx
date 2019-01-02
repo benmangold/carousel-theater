@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-import {OverlayContainer} from '../styled-components/OverlayStyles.jsx';
+import { OverlayContainer } from '../styled-components/OverlayStyles.jsx';
 
-import {ButtonExit} from '../styled-components/ButtonStyles.jsx';
+import { ButtonExit } from '../styled-components/ButtonStyles.jsx';
 
 import OverlayHeader from './OverlayHeader.jsx';
 import OverlayBanner from './OverlayBanner.jsx';
@@ -45,7 +45,7 @@ export default class Overlay extends React.Component {
     return (
       <OverlayContainer overlay={this.props.overlay}>
         <OverlayHeader
-          handleExit={this.props.handleExit}
+          // onClick={this.props.handleExit}
           render={() => (
             <ButtonExit
               onClick={this.props.handleExit}
@@ -53,6 +53,7 @@ export default class Overlay extends React.Component {
               src={X_BUTTON_URL}
             />
           )}
+          // render={this.props.renderHeader}
         />
         <OverlayBanner
           src={this.props.imgs[this.state.centerImageIndex]}

@@ -4,4 +4,4 @@ import {
   OverlayHeader,
 } from '../styled-components/OverlayStyles.jsx';
 
-export default props => <OverlayHeader>{props.render()}</OverlayHeader>;
+export default props => <OverlayHeader onClick={props.onClick}>{props.render()}</OverlayHeader>;

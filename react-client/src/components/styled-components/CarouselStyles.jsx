@@ -32,7 +32,6 @@ const CarouselImageWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center;
   clear: both;
 `;
 

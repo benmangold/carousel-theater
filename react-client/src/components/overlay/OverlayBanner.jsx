@@ -1,30 +1,28 @@
 import React from 'react';
 
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 import {
-  CenterDiv,
+  BannerSpacer,
   BannerWrapper,
 } from '../styled-components/BannerStyles.jsx';
 
-import OverlayNav from './OverlayNavButtons.jsx'
-
-const BannerSpacer = styled.div`
-  margin-top: 10px;
-`;
+import OverlayNav from './OverlayNavButtons.jsx';
 
 export default props => {
   return (
-    <CenterDiv>
+    <BannerWrapper>
       <BannerSpacer />
-      <BannerWrapper>
-        {props.render()}
-        {props.children}
-        {props.displayCarouselButtons ? (
-          <OverlayNav handleLeftClick={props.handleLeftClick} handleRightClick={props.handleRightClick}/>
-        ) : null}
-      </BannerWrapper>
+      {props.render()}
+      {props.children}
+      {props.displayCarouselButtons ? (
+        <OverlayNav
+          handleLeftClick={props.handleLeftClick}
+          handleRightClick={props.handleRightClick}
+        />
+      ) : null}
       <BannerSpacer />
-    </CenterDiv>
+    </BannerWrapper>
+    // </CenterDiv>
   );
 };
